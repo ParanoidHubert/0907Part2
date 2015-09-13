@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.logo{
+    font-size: 30px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-weight: bolder;
+    position: relative;
+    background-color: #2e6da4;
+    height: auto;
+    padding: 5px 5px;
+}
+.loginmain{
+    margin: 0px auto;
+    width: 600px;
+    height: auto;
+    padding: 50px 30px;
+    background-color: #e3e3e3;
+}
+.logintitle{
+    margin: 0px auto;
+    margin-top: 150px;
+    font-size: 20px;
+    width: 600px;
+    height: auto;
+    padding: 10px 15px;
+    background-color: snow;
+}
+hr{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.userenter{
+    height: 20px;
+    float: right;
+    margin-right:70px;
+    margin-top:5px;
+}
+.toollist{
+    margin: 10px auto;
+
+}
+.newbtn{
+    text-align: center;
+    text-indent: 5em;
+}
+.usertitle{
+}
+.usermanagertitle{
+    font-size: 25px;
+    font-weight: bold;
+}
+.usermanagermain{
+}
+.usertable{
+    background-color: #eee;
+    box-shadow: 5px 5px 5px #888888;
+    padding: 20px 20px;
+    
+}
+.fenye{
+    float: right;
+}
+.usermanagermain.customer_info{
+background-color: white;
+}
+.title{
+    text-indent: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.info_form{
+    background-color: #f0f0f0;
+    box-shadow: 5px 5px 5px #888888;
+    padding: 20px 20px;
+}

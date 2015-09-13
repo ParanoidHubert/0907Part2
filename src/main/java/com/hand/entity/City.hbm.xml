@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-9-6 12:09:12 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hand.entity.City" table="city" catalog="sakila">
+        <id name="cityId" type="java.lang.Short">
+            <column name="city_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="country" class="com.hand.entity.Country" fetch="select">
+            <column name="country_id" not-null="true" />
+        </many-to-one>
+        <property name="city" type="string">
+            <column name="city" length="50" not-null="true" />
+        </property>
+        <property name="lastUpdate" type="timestamp">
+            <column name="last_update" length="19" not-null="true" />
+        </property>
+        <set name="addresses" table="address" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="city_id" not-null="true" />
+            </key>
+            <one-to-many class="com.hand.entity.Address" />
+        </set>
+    </class>
+</hibernate-mapping>

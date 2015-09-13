@@ -1,0 +1,9 @@
+用hibernate的xml文件配置ORM映射
+
+在src\main\resources\dbconfig.properties 设置数据库信息
+
+mvn compile
+
+mvn tomcat:run
+
+浏览器URL localhost:8080/Exam0907
