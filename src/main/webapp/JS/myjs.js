@@ -71,7 +71,7 @@ $(document).ready(function(){
 								str += '</tr>';
 							});
 							//}
-							console.log(str);
+							//console.log(str);
 							$("table").empty();
 							$("table").append(str);
 							//为刚添加的两个按钮绑定点击事件
@@ -112,10 +112,12 @@ $(document).ready(function(){
 	
 	//点击列表的删除超链接
 	$(".usertable").find(".del").click(function(){
+		if(confirm("是否确认删除")){
 		var $allListElements= $(this).parent();
 		var customer_id = $allListElements.siblings(".cus_id").text();
 		//alert(customer_id);
 		delCus(customer_id);
+		}
 	})
 	/*
 	 * 根据传入的Customer_id请求删除该用户信息
@@ -191,7 +193,7 @@ $(document).ready(function(){
 					//alert($(this).text());
 					//alert($(this).attr("id"));
 					$("#select_addr").text($(this).text());
-					$("#select_addr").append('<span class="hidden">'+$(this).attr("id")+'</span>');
+					$("#select_addr").append('<span class="hidden addId">'+$(this).attr("id")+'</span>');
 				})
 			}
 		});
@@ -200,6 +202,7 @@ $(document).ready(function(){
 	
 	//点击save change将模态框中的数据用ajax请求到后台修改到数据库中
 	$("#submit").click(function(){
+		if(confirm("是否确认修改")){
 		var modelfooter = $(this).parent(".modal-footer");//当前按钮父集，即modelfooter
 		var modelbody = modelfooter.siblings(".modal-body");
 		var editfirstName = modelbody.find("#firstName").val();
@@ -225,14 +228,14 @@ $(document).ready(function(){
 			error:function(){alert("ajax error!!!")},
 			success:function(json){
 					//alert(json);
-					console.log(json);
+					//console.log(json);
 					if(JSON.stringify(json)=="true"){alert("修改成功")}
 					else alert("修改失败");
 					
 				}
 					
 			});
-		
+		}	
 	})
 })
 

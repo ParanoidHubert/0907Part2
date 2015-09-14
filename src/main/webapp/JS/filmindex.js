@@ -67,8 +67,8 @@ $(document).ready(function(){
 			dataType:'json',
 			error:function(){alert("ajax error!!!")},
 			success:function(json){
-					alert(json);
-					console.log(json);
+					//alert(json);
+					//console.log(json);
 					if(JSON.stringify(json)=="true"){alert("删除成功")}
 					else alert("插入失败");
 					

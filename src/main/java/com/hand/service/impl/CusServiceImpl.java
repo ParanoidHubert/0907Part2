@@ -98,13 +98,7 @@ public class CusServiceImpl implements CusServiceI{
 	}
 
 	public boolean editCus(Customer cus) {
-//		Customer editCus = CusDao.getCuswithId(cus.getCustomerId());
-//		System.out.println("before service update");
-//		editCus.setAddress(cus.getAddress());
-//		editCus.setFirstName(cus.getFirstName());
-//		editCus.setLastName(cus.getLastName());
-//		editCus.setEmail(cus.getEmail());
-//		editCus.setLastUpdate(new Date());
+
 		try{
 		CusDao.updateCus(cus);
 		System.out.println("after service update");

@@ -117,12 +117,6 @@ public class CustomerDaoImpl implements CustomerDaoI{
 		Transaction tx = null; 
 		try{
 			tx = session.beginTransaction();
-//			Customer loadcus = (Customer) session.get(Customer.class, cus.getCustomerId());
-//			loadcus.setFirstName(cus.getFirstName());
-//			loadcus.setLastName(cus.getLastName());
-//			loadcus.setEmail(cus.getEmail());
-//			loadcus.setAddress(cus.getAddress());
-//			loadcus.setLastUpdate(new Date());
 			session.update(cus);
 			tx.commit();
 			session.flush();
